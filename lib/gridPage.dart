@@ -15,9 +15,6 @@ class _gridState extends State<grid> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text("Grid page"),
-      ),
       body: GridView.builder(
           itemCount: 6,
           gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(

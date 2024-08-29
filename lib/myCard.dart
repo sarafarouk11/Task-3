@@ -21,7 +21,7 @@ class myCard extends StatelessWidget {
       child: Column(
         children: [
           SizedBox(width: double.infinity,
-              height: 150,
+              height: 130,
               child: Image.asset('${items?.image}')),
           Divider(color: Colors.black, thickness: 3),
           Row(

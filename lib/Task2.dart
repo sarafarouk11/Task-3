@@ -14,11 +14,6 @@ class _task2State extends State<task2> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(
-            "Slider"
-        ),
-      ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,

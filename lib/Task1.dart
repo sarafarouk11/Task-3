@@ -14,13 +14,6 @@ class _Task1State extends State<Task1> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
-      appBar: AppBar(
-        title: Text(
-            "Counting"
-        ),
-      ),
-
       body: Center(
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,

@@ -1,9 +1,12 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:task2/Task1.dart';
 import 'package:task2/Task2.dart';
+import 'package:task2/authentication.dart';
+import 'package:task2/custom_elevated.dart';
 import 'package:task2/gridPage.dart';
-
-
+import 'package:task2/login.dart';
+import 'package:task2/register.dart';
 import 'TextField.dart';
 
 class home extends StatefulWidget {
@@ -21,12 +24,18 @@ class _homeState extends State<home> {
     grid(),
     Textfield(),
   ];
-
-  int _index = 0;
+  List<String> titles = [
+    "Counter",
+    "Slider",
+    "Grid View",
+    "Calculator",
+  ];
+  int _index = 2;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(title: Text(titles[_index])),
       body: _screens[_index],
 
       bottomNavigationBar: BottomNavigationBar(
@@ -45,6 +54,16 @@ class _homeState extends State<home> {
           BottomNavigationBarItem(icon: Icon(Icons.grid_3x3_sharp), label: "Grid"),
           BottomNavigationBarItem(icon: Icon(Icons.calculate_sharp), label: "Calculator"),
         ],
+      ),
+      drawer: Drawer(
+        child: Column(
+          children: [
+            Spacer(),
+            CustomElevated(textButton: 'Sign Out',onPressed: () {Appauthentication.SignOut(context);
+              },),
+            SizedBox(height: 20,),
+          ],
+        ),
       ),
     );
   }
